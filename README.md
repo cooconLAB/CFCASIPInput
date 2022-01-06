@@ -18,6 +18,9 @@
 4. [setMinLength](#4-setminlength)
 5. [setMaxLength](#5-setmaxlength)
 6. [setOutputType](#6-setoutputtype)
+7. [setCipherType](#7-setciphertype)
+8. [setMatchRegex](#8-setmatchregex)
+
 
 <br/>
 
@@ -44,7 +47,7 @@
 ## 2. setServerRandomCipherType
 
 > ###### 서버 랜덤 키 설정을 위한 암호화 알고리즘을 지정합니다.
-> > ###### ※ 사이트 암호화 설정에 따라주세요.
+> > ###### ※ 기관마다 상이하므로 사이트 설정 주의
 KEY|VALUE
 ---|---
 CIPHER_TYPE_SM2|0
@@ -98,7 +101,7 @@ CIPHER_TYPE_RSA|1
 ## 6. setOutputType
 
 > ##### 출력 타입을 지정합니다.
-> > ###### ※ 사이트 암호화 설정에 따라주세요.
+> > ###### ※ 기관마다 상이하므로 사이트 
 
 KEY|VALUE
 ---|---
@@ -111,6 +114,29 @@ OUTPUT_TYPE_HASH|2
   ...
 ```
 
+<br/>
+
+## 7. setCipherType
+
+> ##### 출력 암호화 알고리즘을 지정합니다.
+> > ###### ※ 기관마다 상이하므로 사이트 설정 주의 
+
+```javascript
+  ...
+  d.setCipherType(CIPHER_TYPE_RSA);
+  ...
+```
 
 
+<br/>
 
+## 8. setMatchRegex
+
+> ##### 출력 데이터 문자열 정리를 위한 정규식 형태를 지정합니다.
+> > ###### ※ 기관마다 상이하므로 사이트 설정 주의
+
+```javascript
+  ...
+  d.setMatchRegex('(^[!-~]{1,20}$)');
+  ...
+```
