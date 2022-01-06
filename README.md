@@ -2,6 +2,10 @@
 
 # CFCASIPInput API Reference v1.01
 
+> ### Stack
+
+<a><img src="https://img.shields.io/badge/JavaScript-gray?style=flat-square&logo=JavaScript&logoColor=F7DF1E"/></a>
+
 <br/>
 
 > CFCASIPInput 의 경우 중국은행 계열 해외 지사에서도 많이 사용하는 암호화 스크립트 파일이므로,
