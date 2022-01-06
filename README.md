@@ -1,10 +1,25 @@
+<br/>
+
+# CFCASIPInput API Reference v1.0
+
+<br/>
+
+> CFCASIPInput 의 경우 중국은행 계열 해외 지사에서도 많이 사용하는 암호화 스크립트 파일이므로,
+> 새로운 기관 또는 계열사 로그인 개발을 진행할 때 기관에 따른 유연한 로그인 개발을 위해
+> API 명세를 해당 피드를 이용해 관리합니다.
+
+<br/>
+
 ## 목차
 
 1. [constructor](#1-constructor)
 2. [setServerRandomCipherType](#2-setserverrandomciphertype)
 3. [setServerRandom](#3-setserverrandom)
 4. [setMinLength](#4-setminlength)
+5. [setMaxLength](#5-setmaxlength)
+6. [setOutputType](#6-setoutputtype)
 
+<br/>
 
 ## 1. constructor
 
@@ -29,6 +44,7 @@
 ## 2. setServerRandomCipherType
 
 > ###### 서버 랜덤 키 설정을 위한 암호화 알고리즘을 지정합니다.
+> > ###### ※ 사이트 암호화 설정에 따라주세요.
 KEY|VALUE
 ---|---
 CIPHER_TYPE_SM2|0
@@ -67,7 +83,33 @@ CIPHER_TYPE_RSA|1
 
 <br/>
 
+## 5. setMaxLength
 
+> ##### 암호화할 데이터의 최대 길이를 지정합니다.
+
+```javascript
+  ...
+  d.setMaxLength(20);
+  ...
+```
+
+<br/>
+
+## 6. setOutputType
+
+> ##### 출력 타입을 지정합니다.
+> > ###### ※ 사이트 암호화 설정에 따라주세요.
+
+KEY|VALUE
+---|---
+OUTPUT_TYPE_ORIGINAL|1
+OUTPUT_TYPE_HASH|2
+
+```javascript
+  ...
+  d.setOutputType(OUTPUT_TYPE_HASH);
+  ...
+```
 
 
 
